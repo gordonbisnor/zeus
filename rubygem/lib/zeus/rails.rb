@@ -91,6 +91,11 @@ module Zeus
       rails_components.each do |component|
         require component
       end
+         rescue => e
+      rails_components = ["rails/all"]
+      rails_components.each do |component|
+        require component
+      end
     end
 
     def default_bundle
